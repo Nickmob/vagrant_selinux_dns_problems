@@ -3,9 +3,9 @@
   become: true
   tasks:
   - name: install packages # переведём синтаксис yum из deprecated 
-    yum:
+    ansible.builtin.dnf:
       name: "{{ packages }}"
-      state: present
+      state: present 
     vars:
       packages:
       - bind
