@@ -4,7 +4,6 @@
 Vagrant.configure(2) do |config|
   config.vm.box = "almalinux/9"
   config.vm.box_version = "9.4.20240805"
-  config.vbguest.auto_update = false
   config.vm.provision "ansible" do |ansible|
     #ansible.verbose = "vvv"
     ansible.playbook = "provisioning/playbook.yml"
